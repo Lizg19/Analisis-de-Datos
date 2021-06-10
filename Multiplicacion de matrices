@@ -1,0 +1,41 @@
+print("MULTIPLICACIÓN DE MATRICES- No se pide el numero de filas de la matriz dos porque debe ser el mismo valor de las columnas de la Matriz 1")
+f1=int(input("Matriz 1: introduzca numero de filas"))
+c1=int(input("Matriz 1: introduzca numero de columnas"))
+c2=int(input("Matriz 2: introduzca numero de columnas"))
+
+A=[]
+for i in range(f1):
+    A.append([0]*c1)
+    
+for i in range(f1):
+    print(A[i])
+B=[]
+for i in range(c1):
+    B.append([0]*c2)
+for i in range(c1):
+    print(B[i])
+for a in range(f1):
+    for b in range(c1):
+        A[a][b]=int (input("Ingrese valor (%d,%d): " % (a,b)))
+for i in range(f1):
+    print(A[i])
+for a in range(c1):
+    for b in range(c2):
+        B[a][b]=int (input("Ingrese valor (%d,%d): " % (a,b)))
+for i in range(c1):
+    print(B[i])
+C=[]
+for i in range(f1):
+    C.append([0]*c2)
+for i in range(f1):
+    print(C[i])
+for i in range(f1):
+    for j in range(c2):
+        for k in range(c1):
+            C[i][j]+= A[i][k]*B[k][j]
+for i in range(f1):
+    R=[]
+    for j in range(c2):
+        R.append(C[i][j])
+        print("El resultado es:")
+    print(R)
